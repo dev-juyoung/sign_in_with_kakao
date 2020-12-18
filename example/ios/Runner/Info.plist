@@ -44,7 +44,7 @@
     
     <!-- KAKAO configurations -->
     <key>KakaoAppKey</key>
-    <string>2c3ef16b88e5bc0a490b538bfe4c3625</string>
+    <string>YOUR_NATIVE_APP_KEY</string>
     <key>CFBundleURLTypes</key>
     <array>
         <dict>
@@ -52,7 +52,7 @@
             <string>Editor</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>kakao2c3ef16b88e5bc0a490b538bfe4c3625</string>
+                <string>kakao{YOUR_NATIVE_APP_KEY}</string>
             </array>
         </dict>
     </array>

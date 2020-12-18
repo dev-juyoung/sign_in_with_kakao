@@ -12,7 +12,7 @@
 
         <meta-data
             android:name="plugin.dev.juyoung.kakao.KakaoAppKey"
-            android:value="2c3ef16b88e5bc0a490b538bfe4c3625" />
+            android:value="YOUR_NATIVE_APP_KEY" />
 
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
             <intent-filter>
@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:host="oauth"
-                    android:scheme="kakao2c3ef16b88e5bc0a490b538bfe4c3625" />
+                    android:scheme="kakao{native_app_key}" />
             </intent-filter>
         </activity>
 
