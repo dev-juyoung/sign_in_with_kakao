@@ -70,7 +70,7 @@ SPEC CHECKSUMS:
   KakaoSDKTalk: 43259798670b8f7af35c7c9677c1e4b1f05f1933
   KakaoSDKTemplate: 000724221018cd32b585aec9df7261be6c263873
   KakaoSDKUser: 55cfcdfb0e4fa04709487936802c09c013bdd782
-  sign_in_with_kakao: defd71d7abd477efcdbf82931c4ec9dc7248b04e
+  sign_in_with_kakao: fd9a448d0c6df98a6b7b0b9bec5b38c289830565
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 

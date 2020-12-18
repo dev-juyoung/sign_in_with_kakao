@@ -61,28 +61,28 @@ dependencies:
 
 ```xml
 <application>
-  <!-- 플러터 플러그인 v2 버전만 지원합니다. -->
-  <meta-data
-  	android:name="flutterEmbedding"
-    android:value="2" />
+    <!-- 플러터 플러그인 v2 버전만 지원합니다. -->
+    <meta-data
+      android:name="flutterEmbedding"
+      android:value="2" />
 
-  <!-- 카카오 SDK 초기화 과정에 사용됩니다. -->
-  <meta-data
-    android:name="plugin.dev.juyoung.kakao.KakaoAppKey"
-    android:value="네이티브 앱 키를 입력해주세요." />
+    <!-- 카카오 SDK 초기화 과정에 사용됩니다. -->
+    <meta-data
+      android:name="plugin.dev.juyoung.kakao.KakaoAppKey"
+      android:value="네이티브 앱 키를 입력해주세요." />
 
-  <!-- 카카오 로그인 처리에 사용됩니다. -->
-  <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
-    <intent-filter>
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
+    <!-- 카카오 로그인 처리에 사용됩니다. -->
+    <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
+      <intent-filter>
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
 
-        <data android:host="oauth"
-            android:scheme="kakao{NATIVE_APP_KEY}" />
-    </intent-filter>
-	</activity>
-
+          <data
+              android:host="oauth"
+              android:scheme="kakao{NATIVE_APP_KEY}" />
+      </intent-filter>
+    </activity>
 </application>
 ```
 
