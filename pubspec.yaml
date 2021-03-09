@@ -1,6 +1,6 @@
 name: sign_in_with_kakao
 description: A new Flutter plugin.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/dev-juyoung/sign_in_with_kakao
 
 environment:
