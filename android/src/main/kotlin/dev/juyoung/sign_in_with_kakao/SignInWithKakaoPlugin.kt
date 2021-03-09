@@ -1,7 +1,7 @@
 package dev.juyoung.sign_in_with_kakao
 
+import android.app.Activity
 import android.content.Context
-import com.kakao.sdk.auth.LoginClient
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ApiError
 import com.kakao.sdk.common.model.AuthError
@@ -11,14 +11,17 @@ import com.kakao.sdk.user.model.User
 import dev.juyoung.sign_in_with_kakao.extensions.rawValue
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
+import io.flutter.embedding.engine.plugins.activity.ActivityAware
+import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 
-class SignInWithKakaoPlugin : FlutterPlugin, MethodCallHandler {
+class SignInWithKakaoPlugin : FlutterPlugin, ActivityAware, MethodCallHandler {
     private lateinit var channel: MethodChannel
     private lateinit var context: Context
+    private lateinit var activity: Activity
 
     companion object {
         const val TAG = "[Plugins] KakaoSDK"
@@ -50,6 +53,26 @@ class SignInWithKakaoPlugin : FlutterPlugin, MethodCallHandler {
 
     override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         channel.setMethodCallHandler(null)
+    }
+
+    override fun onAttachedToActivity(binding: ActivityPluginBinding) {
+        attachToActivity(binding)
+    }
+
+    override fun onDetachedFromActivity() {
+        /* no-op */
+    }
+
+    override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
+        attachToActivity(binding)
+    }
+
+    override fun onDetachedFromActivityForConfigChanges() {
+        /* no-op */
+    }
+
+    private fun attachToActivity(binding: ActivityPluginBinding) {
+        activity = binding.activity
     }
 
     override fun onMethodCall(call: MethodCall, result: Result) {
@@ -85,10 +108,10 @@ class SignInWithKakaoPlugin : FlutterPlugin, MethodCallHandler {
         }
 
         // 카카오톡 설치 유무에 따른 동작 분기
-        if (LoginClient.instance.isKakaoTalkLoginAvailable(context)) {
-            LoginClient.instance.loginWithKakaoTalk(context, callback = callback)
+        if (UserApiClient.instance.isKakaoTalkLoginAvailable(activity)) {
+            UserApiClient.instance.loginWithKakaoTalk(activity, callback = callback)
         } else {
-            LoginClient.instance.loginWithKakaoAccount(context, callback = callback)
+            UserApiClient.instance.loginWithKakaoAccount(activity, callback = callback)
         }
     }
 
