@@ -24,7 +24,6 @@ class _SignInWithKakaoDemoState extends State<SignInWithKakaoDemo> {
 
     /// 프로퍼티 초기화
     _isAuthorized = false;
-    _authToken = null;
     _user = null;
 
     /// 토큰 정보 확인
@@ -59,7 +58,6 @@ class _SignInWithKakaoDemoState extends State<SignInWithKakaoDemo> {
       final authToken = await SignInWithKakao.login();
       _updateIfNecessary(() {
         _isAuthorized = true;
-        _authToken = authToken;
       });
       _me();
     } catch (error) {
@@ -86,7 +84,6 @@ class _SignInWithKakaoDemoState extends State<SignInWithKakaoDemo> {
 
     _updateIfNecessary(() {
       _isAuthorized = false;
-      _authToken = null;
       _user = null;
     });
   }
@@ -100,7 +97,6 @@ class _SignInWithKakaoDemoState extends State<SignInWithKakaoDemo> {
 
     _updateIfNecessary(() {
       _isAuthorized = false;
-      _authToken = null;
       _user = null;
     });
   }
