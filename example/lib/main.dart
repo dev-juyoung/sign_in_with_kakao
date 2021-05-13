@@ -16,7 +16,6 @@ class _SignInWithKakaoDemoState extends State<SignInWithKakaoDemo> {
   final Color _buttonTextColor = Color(0xD9000000);
 
   bool _isAuthorized;
-  AuthToken _authToken;
   User _user;
 
   @override

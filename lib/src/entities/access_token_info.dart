@@ -7,8 +7,8 @@ class AccessTokenInfo {
   final int expiresIn;
 
   AccessTokenInfo._({
-    this.uuid,
-    this.expiresIn,
+    required this.uuid,
+    required this.expiresIn,
   });
 
   factory AccessTokenInfo.fromJson(Map<String, dynamic> json) {
