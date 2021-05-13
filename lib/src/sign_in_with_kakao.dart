@@ -42,7 +42,7 @@ class SignInWithKakao {
   ///
   /// 로그아웃 요청 성공유무에 따라 [bool] 값을 반환합니다.
   static Future<bool> logout() async {
-    return await _channel.invokeMethod('logout');
+    return await _channel.invokeMethod('logout') ?? false;
   }
 
   /// 카카오 SDK를 통해 카카오 플랫폼과 앱의 사용자 계정 연결 상태를 해제합니다.
@@ -51,7 +51,7 @@ class SignInWithKakao {
   ///
   /// 연결 끊기 요청 성공유무에 따라 [bool] 값을 반환합니다.
   static Future<bool> unlink() async {
-    return await _channel.invokeMethod('unlink');
+    return await _channel.invokeMethod('unlink') ?? false;
   }
 
   /// 카카오 SDK를 통해 현재 캐시에 저장하여 사용 중인 사용자 액세스 토큰 정보를 불러옵니다.
@@ -95,6 +95,6 @@ class SignInWithKakao {
   ///
   /// 사용자 정보 저장 성공 유무에 따라 [bool] 값을 반환합니다.
   static Future<bool> updateProfile(Map<String, String> properties) async {
-    return await _channel.invokeMethod('updateProfile', properties);
+    return await _channel.invokeMethod('updateProfile', properties) ?? false;
   }
 }

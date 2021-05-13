@@ -5,7 +5,7 @@ extension StringExtension on String {
     final regex = RegExp(r'(?<=[a-z])[A-Z]');
     return replaceAllMapped(
       regex,
-      (match) => ('_' + match.group(0)),
+      (match) => ('_' + match.group(0)!),
     ).toLowerCase();
   }
 

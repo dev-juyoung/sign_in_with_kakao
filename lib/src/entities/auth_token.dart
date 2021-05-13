@@ -10,7 +10,7 @@ class AuthToken {
   /// 액세스 토큰의 남은 만료시간 (단위: 초)
   ///
   /// 해당 프로퍼티는 iOS 플랫폼에서만 지원합니다.
-  final int expiresIn;
+  final int? expiresIn;
 
   /// 액세스 토큰의 만료 시각
   final DateTime expiredAt;
@@ -21,7 +21,7 @@ class AuthToken {
   /// 리프레시 토큰의 남은 만료시간 (단위: 초)
   ///
   /// 해당 프로퍼티는 iOS 플랫폼에서만 지원합니다.
-  final int refreshTokenExpiresIn;
+  final int? refreshTokenExpiresIn;
 
   /// 리프레시 토큰의 만료 시각
   final DateTime refreshTokenExpiredAt;
@@ -29,19 +29,19 @@ class AuthToken {
   /// 현재까지 사용자로부터 획득에 성공한 scope 정보 (공백으로 구분됨)
   ///
   /// 해당 프로퍼티는 iOS 플랫폼에서만 지원합니다.
-  final String scope;
+  final String? scope;
 
   /// 현재까지 사용자로부터 획득에 성공한 scope 목록
-  final List<String> scopes;
+  final List<String>? scopes;
 
   AuthToken._({
-    this.tokenType,
-    this.accessToken,
+    required this.tokenType,
+    required this.accessToken,
     this.expiresIn,
-    this.expiredAt,
-    this.refreshToken,
+    required this.expiredAt,
+    required this.refreshToken,
     this.refreshTokenExpiresIn,
-    this.refreshTokenExpiredAt,
+    required this.refreshTokenExpiredAt,
     this.scope,
     this.scopes,
   });
