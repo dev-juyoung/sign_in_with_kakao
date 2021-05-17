@@ -15,8 +15,8 @@ class _SignInWithKakaoDemoState extends State<SignInWithKakaoDemo> {
   final Color _buttonColor = Color(0xFFFEE500);
   final Color _buttonTextColor = Color(0xD9000000);
 
-  bool _isAuthorized;
-  User _user;
+  late bool _isAuthorized;
+  User? _user;
 
   @override
   void initState() {
@@ -166,19 +166,19 @@ class _SignInWithKakaoDemoState extends State<SignInWithKakaoDemo> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          if (_user.account.profile.thumbnailImageUrl != null)
+          if (_user!.account!.profile!.thumbnailImageUrl != null)
             Container(
               width: 110.0,
               height: 110.0,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: NetworkImage(_user.account.profile.thumbnailImageUrl),
+                  image: NetworkImage(_user!.account!.profile!.thumbnailImageUrl!),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-          if (_user.account.profile.thumbnailImageUrl == null)
+          if (_user!.account!.profile!.thumbnailImageUrl == null)
             Container(
               width: 110.0,
               height: 110.0,
@@ -193,10 +193,10 @@ class _SignInWithKakaoDemoState extends State<SignInWithKakaoDemo> {
             ),
           SizedBox(height: 16.0),
           Text(
-            _user.account.profile.nickname,
+            _user!.account!.profile!.nickname!,
             style: Theme.of(context)
                 .textTheme
-                .headline5
+                .headline5!
                 .copyWith(color: Colors.white),
           ),
         ],
@@ -222,7 +222,7 @@ class _SignInWithKakaoDemoState extends State<SignInWithKakaoDemo> {
               ),
             ),
             baseColor: Colors.grey,
-            highlightColor: Colors.grey[400],
+            highlightColor: Colors.grey[400]!,
           ),
           SizedBox(height: 16.0),
           Shimmer.fromColors(
@@ -231,7 +231,7 @@ class _SignInWithKakaoDemoState extends State<SignInWithKakaoDemo> {
               style: Theme.of(context).textTheme.headline5,
             ),
             baseColor: Colors.grey,
-            highlightColor: Colors.grey[400],
+            highlightColor: Colors.grey[400]!,
           ),
         ],
       ),

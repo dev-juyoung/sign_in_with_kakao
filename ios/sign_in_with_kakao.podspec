@@ -15,7 +15,7 @@ A new Flutter plugin.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.dependency 'KakaoSDK'
+  s.dependency 'KakaoSDK', '~> 2.5'
   s.static_framework = true
   s.platform = :ios, '11.0'
 

@@ -58,8 +58,8 @@ public class SwiftSignInWithKakaoPlugin: NSObject, FlutterPlugin {
     }
     
     private func login(call: FlutterMethodCall, result: @escaping FlutterResult) {
-        if (AuthApi.isKakaoTalkLoginAvailable()) {
-            AuthApi.shared.loginWithKakaoTalk { authToken, error in
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            UserApi.shared.loginWithKakaoTalk { authToken, error in
                 if let error = error {
                     self.parseError(error: error, result: result)
                     return
@@ -73,7 +73,7 @@ public class SwiftSignInWithKakaoPlugin: NSObject, FlutterPlugin {
                 self.parseAuthToken(authToken: authToken, result: result);
             }
         } else {
-            AuthApi.shared.loginWithKakaoAccount { (authToken, error) in
+            UserApi.shared.loginWithKakaoAccount { (authToken, error) in
                 if let error = error {
                     self.parseError(error: error, result: result)
                     return
@@ -279,8 +279,10 @@ extension ApiFailureReason {
             return "invalid_access_token"
         case .InsufficientScope:
             return "insufficient_scope"
-        case .NotAgeAuthorized:
-            return "not_age_authorized"
+        case .RequiredAgeVerification:
+            return "required_age_verification"
+        case .UnderAgeLimit:
+            return "under_age_limit"
         case .LowerAgeLimit:
             return "lower_age_limit"
         case .AlreadyAgeAuthorized:

@@ -49,8 +49,11 @@ enum ApiFailureReason {
   /// 해당 API에서 접근하는 리소스에 대해 사용자의 동의를 받지 않음
   insufficientScope,
 
-  /// 카카오계정에 연령인증이 필요함
-  notAgeAuthorized,
+  ///연령인증이 필요함
+  requiredAgeVerification,
+
+  ///연령제한에 걸림
+  underAgeLimit,
 
   /// 앱의 연령제한보다 사용자의 연령이 낮음
   lowerAgeLimit,
@@ -136,8 +139,10 @@ extension ApiFailureReasonExtension on ApiFailureReason {
       return ApiFailureReason.invalidAccessToken;
     } else if (ApiFailureReason.insufficientScope.rawValue == rawValue) {
       return ApiFailureReason.insufficientScope;
-    } else if (ApiFailureReason.notAgeAuthorized.rawValue == rawValue) {
-      return ApiFailureReason.notAgeAuthorized;
+    } else if (ApiFailureReason.requiredAgeVerification.rawValue == rawValue) {
+      return ApiFailureReason.requiredAgeVerification;
+    } else if (ApiFailureReason.underAgeLimit.rawValue == rawValue) {
+      return ApiFailureReason.underAgeLimit;
     } else if (ApiFailureReason.lowerAgeLimit.rawValue == rawValue) {
       return ApiFailureReason.lowerAgeLimit;
     } else if (ApiFailureReason.alreadyAgeAuthorized.rawValue == rawValue) {

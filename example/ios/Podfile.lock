@@ -1,39 +1,41 @@
 PODS:
-  - Alamofire (5.4.0)
+  - Alamofire (5.4.3)
   - Flutter (1.0.0)
-  - KakaoSDK (2.0.5):
-    - KakaoSDKAuth (= 2.0.5)
-    - KakaoSDKCommon (= 2.0.5)
-    - KakaoSDKLink (= 2.0.5)
-    - KakaoSDKNavi (= 2.0.5)
-    - KakaoSDKStory (= 2.0.5)
-    - KakaoSDKTalk (= 2.0.5)
-    - KakaoSDKTemplate (= 2.0.5)
-    - KakaoSDKUser (= 2.0.5)
-  - KakaoSDKAuth (2.0.5):
-    - KakaoSDKCommon (= 2.0.5)
-  - KakaoSDKCommon (2.0.5):
+  - KakaoSDK (2.5.2):
+    - KakaoSDKAuth (= 2.5.2)
+    - KakaoSDKCommon (= 2.5.2)
+    - KakaoSDKLink (= 2.5.2)
+    - KakaoSDKNavi (= 2.5.2)
+    - KakaoSDKStory (= 2.5.2)
+    - KakaoSDKTalk (= 2.5.2)
+    - KakaoSDKTemplate (= 2.5.2)
+    - KakaoSDKUser (= 2.5.2)
+  - KakaoSDKAuth (2.5.2):
+    - KakaoSDKCommon (= 2.5.2)
+  - KakaoSDKCommon (2.5.2):
+    - KakaoSDKCommon/Common (= 2.5.2)
+    - KakaoSDKCommon/Network (= 2.5.2)
+  - KakaoSDKCommon/Common (2.5.2)
+  - KakaoSDKCommon/Network (2.5.2):
     - Alamofire (~> 5.1)
-  - KakaoSDKLink (2.0.5):
-    - KakaoSDKCommon (= 2.0.5)
-    - KakaoSDKTemplate (= 2.0.5)
-  - KakaoSDKNavi (2.0.5):
-    - KakaoSDKCommon (= 2.0.5)
-  - KakaoSDKStory (2.0.5):
-    - KakaoSDKAuth (= 2.0.5)
-    - KakaoSDKCommon (= 2.0.5)
-  - KakaoSDKTalk (2.0.5):
-    - KakaoSDKAuth (= 2.0.5)
-    - KakaoSDKCommon (= 2.0.5)
-    - KakaoSDKTemplate (= 2.0.5)
-  - KakaoSDKTemplate (2.0.5):
-    - KakaoSDKCommon (= 2.0.5)
-  - KakaoSDKUser (2.0.5):
-    - KakaoSDKAuth (= 2.0.5)
-    - KakaoSDKCommon (= 2.0.5)
+    - KakaoSDKCommon/Common (= 2.5.2)
+  - KakaoSDKLink (2.5.2):
+    - KakaoSDKCommon (= 2.5.2)
+    - KakaoSDKTemplate (= 2.5.2)
+  - KakaoSDKNavi (2.5.2):
+    - KakaoSDKCommon/Common (= 2.5.2)
+  - KakaoSDKStory (2.5.2):
+    - KakaoSDKUser (= 2.5.2)
+  - KakaoSDKTalk (2.5.2):
+    - KakaoSDKTemplate (= 2.5.2)
+    - KakaoSDKUser (= 2.5.2)
+  - KakaoSDKTemplate (2.5.2):
+    - KakaoSDKCommon/Common (= 2.5.2)
+  - KakaoSDKUser (2.5.2):
+    - KakaoSDKAuth (= 2.5.2)
   - sign_in_with_kakao (0.0.1):
     - Flutter
-    - KakaoSDK
+    - KakaoSDK (~> 2.5)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
@@ -59,19 +61,19 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/sign_in_with_kakao/ios"
 
 SPEC CHECKSUMS:
-  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  KakaoSDK: fa2041be145c3554ca98a61838fc2d620494a293
-  KakaoSDKAuth: 6903dbdaae617a9918030dba0cc47a2f42ca9731
-  KakaoSDKCommon: 0fbcc0fa12d7f1e5fa4d423cd336e877764e1403
-  KakaoSDKLink: f2aad317a7882276a2b4298af248177cf27e40c5
-  KakaoSDKNavi: eceac94d81ddbcf2eb4ea6a41bff9379c71a3707
-  KakaoSDKStory: 96c32e8a65a5cd89380b7f19c90b8d61a5711a80
-  KakaoSDKTalk: 43259798670b8f7af35c7c9677c1e4b1f05f1933
-  KakaoSDKTemplate: 000724221018cd32b585aec9df7261be6c263873
-  KakaoSDKUser: 55cfcdfb0e4fa04709487936802c09c013bdd782
-  sign_in_with_kakao: fd9a448d0c6df98a6b7b0b9bec5b38c289830565
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  KakaoSDK: b50aebec5bb1347d5fcdbfc4b15a5276b84afdfc
+  KakaoSDKAuth: 81715662c03e4c8c1a140f293e9fd6fd68b2e9dd
+  KakaoSDKCommon: 887e22f7aa4647bd0a7d1397512fc5f6211b83d6
+  KakaoSDKLink: 1826d69825bd938e16b552e30099be24905a3b1b
+  KakaoSDKNavi: 75991ded364e5f678919a9e35d10bff47381c213
+  KakaoSDKStory: 813d97897fb54ffbbafe24671543b4049dd35b9b
+  KakaoSDKTalk: 626c6b0fcc1e2bafc8501ecbe102d30db46292e6
+  KakaoSDKTemplate: baad1786a23f1960641b825a32bf295b6da29292
+  KakaoSDKUser: b79c1a18da69681de7c9d3fa59e83c37b711ce7e
+  sign_in_with_kakao: 539c3d1ab2136f096654b1242452fdb7d16957a0
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

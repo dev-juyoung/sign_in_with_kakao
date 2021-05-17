@@ -4,7 +4,7 @@ version: 0.1.0+1
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
@@ -13,9 +13,9 @@ dependencies:
   sign_in_with_kakao:
     path: ../
 
-  cupertino_icons: ^1.0.0
+  cupertino_icons: ^1.0.3
 
-  shimmer: ^1.1.2
+  shimmer: ^2.0.0
 
 dev_dependencies:
   flutter_test:
